@@ -1,9 +1,15 @@
-# 🎵 ❤ MINI PLAYER | Serene Music Player
+<p align="center">
+  <img src="assets/music.png" width="96" height="96" alt="Mini Player Icon">
+</p>
 
-[![Electron](https://img.shields.io/badge/Electron-v42.3.0-blueviolet.svg?style=for-the-badge&logo=electron)](https://www.electronjs.org/)
-[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow.svg?style=for-the-badge&logo=javascript)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![CSS](https://img.shields.io/badge/Styling-Vanilla%20CSS-ff69b4.svg?style=for-the-badge&logo=css3)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[![License](https://img.shields.io/badge/License-ISC-green.svg?style=for-the-badge)](https://opensource.org/licenses/ISC)
+<h1 align="center">❤ MINI PLAYER | Serene Music Player</h1>
+
+<p align="center">
+  <a href="https://www.electronjs.org/"><img src="https://img.shields.io/badge/Electron-v42.3.0-blueviolet.svg?style=for-the-badge&logo=electron" alt="Electron"></a>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://img.shields.io/badge/JavaScript-ES6+-yellow.svg?style=for-the-badge&logo=javascript" alt="JavaScript"></a>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img src="https://img.shields.io/badge/Styling-Vanilla%20CSS-ff69b4.svg?style=for-the-badge&logo=css3" alt="CSS"></a>
+  <a href="https://opensource.org/licenses/ISC"><img src="https://img.shields.io/badge/License-ISC-green.svg?style=for-the-badge" alt="License"></a>
+</p>
 
 Welcome to **❤ MINI PLAYER** (also known as the *Serene Music Player*), an exquisitely styled, frameless, and semi-transparent desktop audio player built on the high-performance **Electron.js** shell. Featuring gorgeous premium dark aesthetics, glassmorphic structures, dynamic interactive animations, a high-fidelity metadata reader, and real-time frequency visualizers, it redefines the desktop music listening experience.
 
