@@ -1,0 +1,615 @@
+:root {
+    --transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    --bw: 3px; /* Consistent Border Weight */
+}
+
+/* RETURNING TO YOUR PREFERRED HIGH-CONTRAST THEMES */
+.theme-midnight {
+    --bg: #0a0a0c; --accent: #7c4dff; --panel: #16161a;
+    --text: #ffffff; --subtext: #888; --border: #ffffff;
+    --shadow: #7c4dff;
+    --drawer-bg: rgba(22, 22, 26, 0.85);
+    --accent-txt: #0a0a0c;
+}
+.theme-rose {
+    --bg: #fff5f5; --accent: #ffafcc; --panel: #ffffff;
+    --text: #2D3436; --subtext: #a18089; --border: #2D3436;
+    --shadow: #ffafcc;
+    --drawer-bg: rgba(255, 245, 245, 0.85);
+    --accent-txt: #2D3436;
+}
+.theme-emerald {
+    --bg: #06120e; --accent: #00ff88; --panel: #0a1a15;
+    --text: #00ff88; --subtext: #006400; --border: #00ff88;
+    --shadow: #00ff88;
+    --drawer-bg: rgba(10, 26, 21, 0.85);
+    --accent-txt: #06120e;
+}
+.theme-arctic {
+    --bg: #f0f9ff; --accent: #00d2ff; --panel: #ffffff;
+    --text: #003366; --subtext: #6699cc; --border: #003366;
+    --shadow: #00d2ff;
+    --drawer-bg: rgba(255, 255, 255, 0.85);
+    --accent-txt: #003366;
+}
+.theme-rgb {
+    --bg: #050505; --accent: #ff005d; --panel: #111;
+    --text: #EDEDED; --subtext: #8b5cf6; --border: #00e5ff;
+    --shadow: #ff005d;
+    --drawer-bg: rgba(17, 17, 17, 0.85);
+    --accent-txt: #050505;
+}
+.theme-rgb .player-container {
+    animation: rgb-border 5s linear infinite;
+}
+
+.theme-neon {
+    --bg: #0b0f1a; --accent: #a855f7; --panel: #161b2b;
+    --text: #e5e7eb; --subtext: #38bdf8; --border: #ec4899;
+    --shadow: #a855f7;
+    --drawer-bg: rgba(22, 27, 43, 0.85);
+    --accent-txt: #0b0f1a;
+}
+
+.theme-aurora {
+    --bg: #0f2027; --accent: #6ee7b7; --panel: #1c3138;
+    --text: #f8fafc; --subtext: #93c5fd; --border: #f0abfc;
+    --shadow: #6ee7b7;
+    --drawer-bg: rgba(28, 49, 56, 0.85);
+    --accent-txt: #0f2027;
+}
+
+.theme-hyperpop {
+    --bg: #12001a; --accent: #ff3d81; --panel: #2a003d;
+    --text: #fafafa; --subtext: #3cf2ff; --border: #a3ff12;
+    --shadow: #ff3d81;
+    --drawer-bg: rgba(42, 0, 61, 0.85);
+    --accent-txt: #12001a;
+}
+
+.theme-rgb.playing #disc-art {
+    filter: drop-shadow(0 0 15px var(--accent));
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+
+body {
+    width: 480px; height: 560px;
+    background: transparent;
+    font-family: 'Inter', system-ui, sans-serif;
+    display: flex; align-items: center; justify-content: center;
+}
+
+.player-container {
+    width: 440px; height: 520px;
+    background: var(--bg);
+    border: var(--bw) solid var(--border);
+    border-radius: 32px;
+    display: flex; flex-direction: column;
+    position: relative; overflow: hidden;
+    box-shadow: 12px 12px 0px var(--border); /* Iconic Shadow Style */
+    transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Visual cue when dragging files over the player window */
+body.drag-active .player-container {
+    transform: scale(0.98);
+    box-shadow: 0 0 30px var(--accent), 8px 8px 0px var(--border);
+    border-color: var(--accent);
+}
+
+/* CUSTOM TITLEBAR */
+.titlebar {
+    height: 55px; display: flex; align-items: center; justify-content: space-between;
+    padding: 0 25px; -webkit-app-region: drag; border-bottom: var(--bw) solid var(--border);
+}
+
+.brand-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    -webkit-app-region: no-drag; /* Prevents OS dragging region from freezing animations */
+}
+
+.brand-title { font-size: 15px; font-weight: 900; letter-spacing: 2px; color: var(--text); }
+
+.eq-visualizer {
+    display: flex;
+    align-items: flex-end;
+    gap: 2.5px;
+    width: 24px;
+    height: 14px;
+    padding-bottom: 2px;
+}
+
+.eq-bar {
+    display: inline-block; /* CSS transforms do NOT apply to default inline <span> tags! */
+    width: 3px;
+    height: 100%;
+    background-color: var(--accent);
+    border: 1px solid var(--border);
+    transform-origin: bottom;
+    transform: scaleY(0.2);
+    /* Removed transition to prevent rendering conflicts with CSS keyframes */
+}
+
+
+.win-controls { display: flex; gap: 8px; -webkit-app-region: no-drag; }
+.win-btn {
+    width: 28px; height: 28px; border: var(--bw) solid var(--border);
+    border-radius: 8px; background: var(--panel); color: var(--text);
+    font-weight: 850px; cursor: pointer; transition: 0.2s;
+}
+.win-btn:hover { background: var(--accent); color: var(--accent-txt); }
+
+/* ALBUM ART AREA */
+.album-zone {
+    width: 230px; height: 230px; margin: 20px auto;
+    background: var(--panel);
+    border: var(--bw) solid var(--border);
+    border-radius: 24px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 80px; transition: var(--transition);
+    box-shadow: 8px 8px 0px var(--border);
+}
+
+.playing .album-zone { transform: scale(1.02) rotate(-1deg); box-shadow: 12px 12px 0px var(--shadow); }
+
+/* TEXT ELEMENTS */
+/* TEXT ELEMENTS & UNIFIED MARQUEE SCROLL */
+.info-hub {
+    margin-bottom: 10px;
+    width: 85%; margin-left: auto; margin-right: auto;
+    overflow: hidden;
+}
+#track-name {
+    display: inline-block;
+    font-size: 15px; font-weight: 900; color: var(--text);
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    max-width: 100%;
+    letter-spacing: 0.5px;
+    transform-origin: center;
+}
+#track-name.scroll-active {
+    text-overflow: clip; /* Remove the ellipses while scrolling */
+    animation: marquee-scroll 7s ease-in-out infinite alternate 1.5s;
+}
+.artist-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    margin-top: 3px;
+    width: 100%;
+    overflow: hidden;
+}
+#artist-name {
+    display: inline-block;
+    font-size: 11px; font-weight: 600; color: var(--subtext);
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    max-width: 75%;
+    transform-origin: center;
+}
+#artist-name.scroll-active {
+    text-overflow: clip;
+    animation: marquee-scroll 7s ease-in-out infinite alternate 1.5s;
+}
+#track-counter {
+    font-size: 9px;
+    font-weight: 800;
+    color: var(--subtext);
+    opacity: 0.85;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+@keyframes marquee-scroll {
+    0% { transform: translateX(0); }
+    12% { transform: translateX(0); } /* brief pause at start */
+    88% { transform: translateX(var(--scroll-dist)); }
+    100% { transform: translateX(var(--scroll-dist)); } /* brief pause at end */
+}
+
+/* PROGRESS BAR: PIXEL PERFECT */
+.progress-container { width: 85%; margin: 15px auto; position: relative; }
+.bar-bg {
+    height: 12px; background: var(--panel);
+    border: var(--bw) solid var(--border);
+    border-radius: 20px; overflow: hidden; position: relative;
+}
+#seek-fill {
+    height: 100%; width: 0%; background: var(--accent);
+    border-right: var(--bw) solid var(--border);
+    transition: width 0.1s linear;
+}
+
+.time-stamp {
+    display: flex;
+    justify-content: space-between;
+    font-size: 9px;
+    font-weight: 800;
+    color: var(--subtext);
+    margin-top: 5px;
+    padding: 0 2px;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 0.5px;
+}
+
+/* CONTROLS: PRECISE LAYOUT [User Requested] */
+.controls-row { display: flex; align-items: center; justify-content: center; gap: 15px; margin-top: 10px; }
+
+.btn-main {
+    width: 50px; height: 50px; border-radius: 15px;
+    border: var(--bw) solid var(--border);
+    background: var(--panel); color: var(--text);
+    font-size: 18px; cursor: pointer; transition: var(--transition);
+    display: flex; align-items: center; justify-content: center;
+}
+
+#play {
+    width: 100px; height: 55px; border-radius: 30px;
+    border: var(--bw) solid var(--border);
+    background: var(--accent); color: var(--accent-txt);
+    font-weight: 900; font-size: 14px;
+    cursor: pointer; transition: var(--transition);
+}
+
+.btn-main:hover { transform: translate(-2px, -2px); box-shadow: 4px 4px 0px var(--border); }
+#play:hover { transform: scale(1.05); }
+
+/* REAL-TIME VOLUME HUD */
+.volume-dock {
+    margin-top: 25px; display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 3px;
+}
+#vol-slider {
+    -webkit-appearance: none; width: 120px; height: 10px; appearance: none;
+    background: var(--panel); border: 2px solid var(--border); border-radius: 10px;
+}
+#vol-slider::-webkit-slider-thumb {
+    -webkit-appearance: none; width: 16px; height: 16px;
+    background: var(--accent); border: 2px solid var(--border); border-radius: 4px; cursor: pointer;
+}
+
+.disc-vinyl {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-origin: center center;
+    transition: var(--transition);
+}
+
+/* Default state: plain rotating CD */
+.disc-vinyl img {
+    max-width: 230px;
+    max-height: 230px;
+    object-fit: contain;
+}
+
+.disc-vinyl .vinyl-grooves,
+.disc-vinyl .vinyl-gloss {
+    display: none;
+}
+
+/* Embedded Album Art state: custom premium circular vinyl */
+.disc-vinyl.has-art {
+    width: 175px;
+    height: 175px;
+    position: relative;
+    border-radius: 50%;
+    border: var(--bw) solid var(--border);
+    overflow: hidden;
+    background: #0f0f12;
+    /* Uses dynamic --bass-glow calculated from Web Audio analyser low frequencies */
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.8), 0 0 var(--bass-glow, 15px) var(--shadow);
+    transition: box-shadow 0.05s ease;
+}
+
+.disc-vinyl.has-art img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.disc-vinyl.has-art .vinyl-grooves {
+    display: block;
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    border-radius: 50%;
+    background: repeating-radial-gradient(
+        circle,
+        rgba(0, 0, 0, 0.15),
+        rgba(0, 0, 0, 0.15) 4px,
+        rgba(255, 255, 255, 0.04) 5px,
+        rgba(0, 0, 0, 0.2) 6px
+    );
+    pointer-events: none;
+}
+
+.disc-vinyl.has-art .vinyl-gloss {
+    display: block;
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(
+        from 0deg,
+        rgba(255, 255, 255, 0) 0deg,
+        rgba(255, 255, 255, 0.09) 35deg,
+        rgba(255, 255, 255, 0) 75deg,
+        rgba(255, 255, 255, 0) 180deg,
+        rgba(255, 255, 255, 0.09) 215deg,
+        rgba(255, 255, 255, 0) 255deg,
+        rgba(255, 255, 255, 0) 360deg
+    );
+    pointer-events: none;
+}
+
+.playing #disc-art {
+    animation: roll 12s linear infinite; /* Smooth, natural vinyl rotation speed */
+}
+
+@keyframes roll {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+@keyframes rgb-border {
+    0% { border-color: #ff005d; box-shadow: 12px 12px 0px #00e5ff; }
+    33% { border-color: #00e5ff; box-shadow: 12px 12px 0px #8b5cf6; }
+    66% { border-color: #8b5cf6; box-shadow: 12px 12px 0px #ff005d; }
+    100% { border-color: #ff005d; box-shadow: 12px 12px 0px #00e5ff; }
+}
+.theme-hyperpop.playing .album-zone {
+    animation: beat 0.6s ease-in-out infinite alternate;
+}
+@keyframes beat {
+    from { transform: scale(1.02); }
+    to { transform: scale(1.08); }
+}
+
+/* ════════════════════════════════════════════════════════════
+   PLAYLIST DRAWER (Frosted Glass & Active Theme Glow Highlights)
+   ════════════════════════════════════════════════════════════ */
+.playlist-drawer {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 380px; /* Expands to cover album zone nicely from bottom */
+    background: var(--drawer-bg); /* Elegant semi-transparent theme backdrop */
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border-top: var(--bw) solid var(--border); /* Border at top of slide-up */
+    border-radius: 28px 28px 0 0; /* Curved top corners */
+    z-index: 100;
+    transform: translateY(100%); /* Slides up from the bottom out of view */
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); /* Silky-smooth Ease Out Expo */
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px 20px 20px; /* Cushion padding at the bottom for rounded window corner scrollbars */
+    box-shadow: 0 -8px 24px rgba(0,0,0,0.6);
+}
+
+/* Depth-of-Field Blur effect on background when drawer is active */
+.player-container:has(.playlist-drawer.open) main {
+    filter: blur(8px) grayscale(0.15);
+    opacity: 0.15;
+    transform: scale(0.96);
+    pointer-events: none;
+}
+main {
+    transition: filter 0.4s ease, opacity 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); /* Perfectly synchronized scaling */
+}
+
+.playlist-drawer.open {
+    transform: translateY(0);
+}
+
+/* Floating top-left queue toggle button (matches user red circle) */
+.queue-btn-floating {
+    position: absolute;
+    top: 75px;
+    left: 25px;
+    z-index: 10;
+}
+
+.icon-playlist {
+    width: 18px;
+    height: 18px;
+    color: var(--text);
+    transition: var(--transition);
+}
+
+.btn-mini:hover .icon-playlist {
+    color: var(--accent-txt); /* High contrast legible hover state */
+}
+
+.drawer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 12px;
+    margin-bottom: 15px;
+}
+
+.drawer-title-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text);
+}
+
+.drawer-title-container .icon-playlist {
+    width: 16px;
+    height: 16px;
+    color: var(--accent);
+}
+
+.drawer-title {
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    color: var(--text);
+}
+
+.close-drawer {
+    background: var(--panel);
+    border: 2px solid var(--border);
+    color: var(--text);
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.close-drawer:hover {
+    background: var(--accent);
+    color: var(--accent-txt);
+    transform: scale(1.05);
+}
+
+.drawer-content {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden; /* Suppress vertical layout horizontal scrollbar completely */
+    padding-right: 4px;
+    padding-bottom: 25px; /* Breathable spacing at the bottom rounded corner edges */
+}
+
+/* Seamless theme-accented scrollbars */
+.drawer-content::-webkit-scrollbar {
+    width: 6px;
+}
+.drawer-content::-webkit-scrollbar-track {
+    background: transparent; /* Smooth look */
+}
+.drawer-content::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 10px;
+    border: 1px solid var(--bg); /* Floating appearance */
+}
+.drawer-content::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+}
+
+.queue-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.015);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 11px 16px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.15);
+}
+
+/* Removed left-side indicator line at user request */
+
+.queue-item:hover {
+    /* Kept parent box stationary to prevent the feedback hover shaking loop */
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+.queue-item:hover .item-meta {
+    transform: translateX(3px); /* Subtly minimized tactile slide-right shift */
+}
+
+/* Highlighted playing item */
+.queue-item.active {
+    background: var(--panel) !important;
+    border: 1px solid var(--border);
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.4), 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Removed left-side indicator bar activation */
+
+.queue-item.active .item-title {
+    color: var(--accent);
+    text-shadow: 0 0 6px var(--shadow); /* Soft neon text glow */
+    font-weight: 800;
+}
+
+.queue-item.active .item-index {
+    color: var(--accent);
+}
+
+.item-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    overflow: hidden;
+    flex: 1;
+    transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.15); /* Smooth text shift animation */
+}
+
+.item-index {
+    font-size: 10px;
+    font-weight: 850;
+    color: var(--subtext);
+    font-family: monospace;
+}
+
+.item-title {
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--text);
+    transition: color 0.2s ease;
+}
+
+.remove-item-btn {
+    background: transparent;
+    border: none;
+    color: var(--subtext);
+    cursor: pointer;
+    font-size: 12px;
+    padding: 2px 6px;
+    transition: all 0.2s ease;
+}
+
+.remove-item-btn:hover {
+    color: #ff005d;
+    transform: scale(1.2);
+}
+
+.queue-item.active .remove-item-btn {
+    color: var(--subtext); /* Ensure readable contrast on dark panel */
+    opacity: 0.85;
+}
+
+.queue-item.active .remove-item-btn:hover {
+    color: #ff005d;
+    opacity: 1;
+}
+
+/* MINI DOCK ACTION BUTTON */
+.btn-mini {
+    width: 38px;
+    height: 32px;
+    border-radius: 10px;
+    border: 2px solid var(--border);
+    background: var(--panel);
+    color: var(--text);
+    font-size: 13px;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-mini:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 2px 2px 0px var(--border);
+    background: var(--accent); /* Fills with theme accent color on hover */
+    border-color: var(--border);
+}
