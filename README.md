@@ -11,37 +11,28 @@ Welcome to **❤ MINI PLAYER** (also known as the *Serene Music Player*), an exq
 
 ## 🎨 Interface & Screenshots Showcase
 
-Below is a showcase grid of the **Mini Player** in action across different high-contrast themes.
+Below is a showcase of the **Mini Player** in action across three of its most iconic, vibrant themes:
 
-| 🌌 Midnight Shadow | 🎨 RGB Spectrum |
-| :---: | :---: |
-| ![Midnight Theme Screenshot](assets/screenshot_midnight.png) | ![RGB Theme Screenshot](assets/screenshot_rgb.png) |
-
-| 🌲 Emerald Forest | 🌸 Rose Gold |
-| :---: | :---: |
-| ![Emerald Theme Screenshot](assets/screenshot_emerald.png) | ![Rose Theme Screenshot](assets/screenshot_rose.png) |
-
-| 🍭 Hyperpop Rave |
-| :---: |
-| ![Hyperpop Theme Screenshot](assets/screenshot_hyperpop.png) |
+| 🎨 RGB Spectrum | 🌸 Rose Gold | 🍭 Hyperpop Rave |
+| :---: | :---: | :---: |
+| ![RGB Spectrum Theme Screenshot](assets/screenshot_rgb.png) | ![Rose Gold Theme Screenshot](assets/screenshot_rose.png) | ![Hyperpop Rave Theme Screenshot](assets/screenshot_hyperpop.png) |
 
 > [!TIP]
 > ### 📸 How to show your real desktop player images on GitHub:
 > 1. Launch your music player locally by running `npm start`.
-> 2. Click the theme cycle button (**☀**) to select a theme (e.g. Midnight, RGB, Neon, Rose).
-> 3. Take a quick screenshot crop of the running application on your screen.
+> 2. Click the theme cycle button (**☀**) to select the target theme.
+> 3. Take a quick crop screenshot of the running application on your screen.
 > 4. Save your screenshots directly inside your local `assets/` folder with these names:
->    * `screenshot_midnight.png`
->    * `screenshot_rgb.png`
->    * `screenshot_neon.png`
->    * `screenshot_rose.png`
-> 5. Commit and push the files:
+>    * `screenshot_rgb.png` (RGB Spectrum)
+>    * `screenshot_rose.png` (Rose Gold)
+>    * `screenshot_hyperpop.png` (Hyperpop Rave)
+> 5. Commit and push the files to GitHub:
 >    ```bash
 >    git add assets/
 >    git commit -m "docs: add actual desktop player screenshots"
 >    git push
 >    ```
-> Once pushed, these images will instantly replace the placeholders and display your actual desktop player design to everyone on GitHub!
+> Once pushed, these images will instantly replace the placeholders and showcase your real running player!
 
 ---
 
@@ -117,10 +108,8 @@ music-player/
 ├── assets/                  # UI assets & resources
 │   ├── disc2.png            # Default spinning vinyl center cover art
 │   ├── music.png            # Native application window icon
-│   ├── screenshot_midnight.png # Real Midnight theme screenshot
-│   ├── screenshot_rgb.png      # Real RGB theme screenshot
+│   ├── screenshot_rgb.png      # Real RGB Spectrum theme screenshot
 │   ├── screenshot_rose.png     # Real Rose Gold theme screenshot
-│   ├── screenshot_emerald.png  # Real Emerald Forest theme screenshot
 │   └── screenshot_hyperpop.png # Real Hyperpop Rave theme screenshot
 ├── node_modules/            # [IGNORED] External Node dependencies
 ├── index.html               # Main user interface framework
