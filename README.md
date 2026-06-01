@@ -12,6 +12,35 @@
 </p>
 
 Welcome to **❤ MINI PLAYER** (also known as the *Serene Music Player*), an exquisitely styled, frameless, and high-contrast desktop audio player built on the high-performance **Electron.js** shell. Featuring bold Neo-Brutalist design elements, Cyberpunk-inspired retro-futuristic styling, dynamic interactive animations, a high-fidelity metadata reader, and real-time frequency visualizers, it redefines the desktop music listening experience.
+---
+
+## 📥 Direct Desktop Installation
+
+Click the badges below to instantly download the latest compiled installer for your operating system:
+
+<p align="center">
+  <a href="https://github.com/SuryaK999/Mini-Music-Desktop-Player-/releases/latest/download/Serene-Music-Player-Setup.exe">
+    <img src="https://img.shields.io/badge/Windows-Download%20.exe-blue?style=for-the-badge&logo=windows&logoColor=white&color=0078d4" alt="Download Windows Installer">
+  </a>
+  <a href="https://github.com/SuryaK999/Mini-Music-Desktop-Player-/releases/latest/download/Serene-Music-Player.dmg">
+    <img src="https://img.shields.io/badge/macOS-Download%20.dmg-black?style=for-the-badge&logo=apple&logoColor=white&color=000000" alt="Download macOS Installer">
+  </a>
+  <a href="https://github.com/SuryaK999/Mini-Music-Desktop-Player-/releases/latest/download/Serene-Music-Player.AppImage">
+    <img src="https://img.shields.io/badge/Linux-Download%20.AppImage-orange?style=for-the-badge&logo=linux&logoColor=white&color=f0513e" alt="Download Linux Installer">
+  </a>
+</p>
+
+> [!NOTE]
+> ### ⚙ Direct Downloads & Automation Setup
+> * **Direct Downloading:** These download buttons point directly to the latest GitHub Release files. If they return a `404` page, it means you have not pushed your first release tag yet (see below).
+> * **Automated Packaging (GitHub Actions):** The repository is now configured to automatically compile, bundle, and release installers whenever you tag your code:
+>   1. Commit and push your local files to your remote GitHub repository.
+>   2. Run these commands to tag a new version:
+>      ```bash
+>      git tag v1.0.0
+>      git push origin v1.0.0
+>      ```
+>   3. GitHub Actions will spin up cloud runners (Windows, macOS, and Linux), package the application using `electron-builder`, and publish the installer assets automatically under the **Releases** page! Once that finishes, these badges will instantly trigger direct downloads of the app!
 
 ---
 

@@ -1,19 +1,55 @@
 {
   "name": "music-player",
   "version": "1.0.0",
-  "description": "",
+  "description": "Mini Music Desktop Player",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-builder build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SuryaK999/Mini-Music-Desktop-Player-.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "SuryaK999",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^42.3.0"
+    "electron": "^42.3.0",
+    "electron-builder": "^26.8.1"
   },
   "dependencies": {
     "music-metadata": "^11.12.3"
+  },
+  "build": {
+    "appId": "com.suryak999.minimusicplayer",
+    "productName": "Serene-Music-Player",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*",
+      "!dist${/*}",
+      "!.git${/*}",
+      "!.github${/*}"
+    ],
+    "win": {
+      "target": "nsis",
+      "artifactName": "${productName}-Setup.${ext}"
+    },
+    "mac": {
+      "target": "dmg",
+      "artifactName": "${productName}.${ext}"
+    },
+    "linux": {
+      "target": "AppImage",
+      "artifactName": "${productName}.${ext}"
+    },
+    "publish": {
+      "provider": "github",
+      "owner": "SuryaK999",
+      "repo": "Mini-Music-Desktop-Player-"
+    }
   }
 }
