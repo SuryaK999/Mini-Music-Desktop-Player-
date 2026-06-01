@@ -11,7 +11,7 @@
   <a href="https://opensource.org/licenses/ISC"><img src="https://img.shields.io/badge/License-ISC-green.svg?style=for-the-badge" alt="License"></a>
 </p>
 
-Welcome to **❤ MINI PLAYER** (also known as the *Serene Music Player*), an exquisitely styled, frameless, and semi-transparent desktop audio player built on the high-performance **Electron.js** shell. Featuring gorgeous premium dark aesthetics, glassmorphic structures, dynamic interactive animations, a high-fidelity metadata reader, and real-time frequency visualizers, it redefines the desktop music listening experience.
+Welcome to **❤ MINI PLAYER** (also known as the *Serene Music Player*), an exquisitely styled, frameless, and high-contrast desktop audio player built on the high-performance **Electron.js** shell. Featuring bold Neo-Brutalist design elements, Cyberpunk-inspired retro-futuristic styling, dynamic interactive animations, a high-fidelity metadata reader, and real-time frequency visualizers, it redefines the desktop music listening experience.
 
 ---
 
@@ -44,7 +44,7 @@ Below is a showcase of the **Mini Player** in action across three of its most ic
 
 ## 🔥 Key Features
 
-### ✨ Visual Brilliance & Glassmorphic Design
+### ✨ Visual Brilliance & Neo-Brutalist Styling
 *   **Frameless Translucent Window:** An ultra-premium, frameless container with smooth, customized drag-ready headers (`frame: false`, `transparent: true`).
 *   **Synchronized Vinyl Disc Animation:** Features an interactive rotating vinyl record design that spins smoothly when audio plays, carrying the embedded album art of the active track.
 *   **Real-time Frequency-Reactive Glow:** A dynamic ambient shadow behind the playing vinyl disc that pulses and spreads based on the real-time intensity of the low-end bass frequencies.
