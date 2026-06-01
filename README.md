@@ -9,12 +9,35 @@ Welcome to **❤ MINI PLAYER** (also known as the *Serene Music Player*), an exq
 
 ---
 
-## 🎨 Interface Preview
+## 🎨 Interface & Screenshots Showcase
 
-![Mini Player Interface Mockup](assets/mockup.png)
+Below is a showcase grid of the **Mini Player** in action. You can easily populate this showcase with real screenshots captured directly from your desktop!
 
-> [!NOTE]
-> The interface is designed around a premium **Glassmorphism** layout. It floats beautifully above your active desktop applications with rounded corners, translucent backdrops, and active shadow reflections.
+| 🌌 Midnight Theme | 🎨 RGB Gradient Theme |
+| :---: | :---: |
+| ![Midnight Theme Screenshot](assets/screenshot_midnight.png) | ![RGB Theme Screenshot](assets/screenshot_rgb.png) |
+
+| ⚡ Neon Theme | 🌸 Rose Gold Theme |
+| :---: | :---: |
+| ![Neon Theme Screenshot](assets/screenshot_neon.png) | ![Rose Theme Screenshot](assets/screenshot_rose.png) |
+
+> [!TIP]
+> ### 📸 How to show your real desktop player images on GitHub:
+> 1. Launch your music player locally by running `npm start`.
+> 2. Click the theme cycle button (**☀**) to select a theme (e.g. Midnight, RGB, Neon, Rose).
+> 3. Take a quick screenshot crop of the running application on your screen.
+> 4. Save your screenshots directly inside your local `assets/` folder with these names:
+>    * `screenshot_midnight.png`
+>    * `screenshot_rgb.png`
+>    * `screenshot_neon.png`
+>    * `screenshot_rose.png`
+> 5. Commit and push the files:
+>    ```bash
+>    git add assets/
+>    git commit -m "docs: add actual desktop player screenshots"
+>    git push
+>    ```
+> Once pushed, these images will instantly replace the placeholders and display your actual desktop player design to everyone on GitHub!
 
 ---
 
@@ -24,7 +47,7 @@ Welcome to **❤ MINI PLAYER** (also known as the *Serene Music Player*), an exq
 *   **Frameless Translucent Window:** An ultra-premium, frameless container with smooth, customized drag-ready headers (`frame: false`, `transparent: true`).
 *   **Synchronized Vinyl Disc Animation:** Features an interactive rotating vinyl record design that spins smoothly when audio plays, carrying the embedded album art of the active track.
 *   **Real-time Frequency-Reactive Glow:** A dynamic ambient shadow behind the playing vinyl disc that pulses and spreads based on the real-time intensity of the low-end bass frequencies.
-*   **8 Interactive Theme Profiles:** Single-click cycling system to swap across high-contrast, breathtaking palettes:
+*   **8 Interactive Theme Profiles:** Single-click cycling system to swap across high-contrast, breathtaking HSL palettes:
     1.  🎨 **RGB Spectrum** (`theme-rgb`) - Cybernetic colors.
     2.  🌌 **Midnight Shadow** (`theme-midnight`) - Deep indigo & dark slate.
     3.  🌸 **Rose Gold** (`theme-rose`) - Soft champagne & blush gold.
@@ -37,7 +60,7 @@ Welcome to **❤ MINI PLAYER** (also known as the *Serene Music Player*), an exq
 ### 🎚 High-End Audio & Queue Controls
 *   **Equalizer Audio Visualizer:** High-performance, four-bar audio equalizer that parses and animates to live sound frequencies using the HTML Web Audio API.
 *   **Slide-up Playlist Queue Drawer:** An elegant drawer overlay carrying song indices, titles, and deletion triggers. Seamless double-click interaction allows you to jump directly to any track in the queue.
-*   **Drag & Drop Desktop Integration:** Seamlessly drag audio files (`.mp3`, `.wav`, `.flac`, `.m4a`) from your operating system directly into the window to queue them instantly.
+*   **Drag & Drop Desktop Integration:** Seamlessly drag audio files (`.mp3`, `.wav`, `.flac`, `.m4a`) from your operating system desktop or file manager directly into the window to queue them instantly.
 *   **Drag-to-Seek Precision Bar:** Click or drag along the seek timeline to instantly skip to any moment of the song, complete with real-time timer counters and visual status bar fillers.
 *   **Built-in Keyboard Shortcuts:** Power-user friendly controls mapped directly to standard key inputs.
 
@@ -90,7 +113,10 @@ music-player/
 ├── assets/                  # UI assets & resources
 │   ├── disc2.png            # Default spinning vinyl center cover art
 │   ├── music.png            # Native application window icon
-│   └── mockup.png           # Premium UI header preview image
+│   ├── screenshot_midnight.png # Real Midnight theme screenshot (user-added)
+│   ├── screenshot_rgb.png      # Real RGB theme screenshot (user-added)
+│   ├── screenshot_neon.png     # Real Neon theme screenshot (user-added)
+│   └── screenshot_rose.png     # Real Rose Gold theme screenshot (user-added)
 ├── node_modules/            # [IGNORED] External Node dependencies
 ├── index.html               # Main user interface framework
 ├── main.js                  # Electron application entry point
@@ -104,7 +130,7 @@ music-player/
 
 ---
 
-## 🚀 Quick Start Guide
+## 🚀 Quick Start & Installation
 
 ### Prerequisites
 Ensure you have [Node.js](https://nodejs.org/) installed (v16.0.0 or higher recommended).
@@ -113,7 +139,7 @@ Ensure you have [Node.js](https://nodejs.org/) installed (v16.0.0 or higher reco
 
 1.  **Clone the Repository:**
     ```bash
-    git clone https://github.com/your-username/music-player.git
+    git clone https://github.com/SuryaK999/Mini-Music-Desktop-Player-.git
     cd music-player
     ```
 
@@ -129,7 +155,7 @@ Ensure you have [Node.js](https://nodejs.org/) installed (v16.0.0 or higher reco
 
 ---
 
-## 🛡 Git Ignore & GitHub Best Practices (Task 2)
+## 🛡 Git Ignore & GitHub Best Practices
 
 To ensure your GitHub repository remains lightweight, secure, and clean, a production-ready `.gitignore` file has been added in the project root.
 
