@@ -15,15 +15,15 @@ function createWindow() {
       preload: path.join(__dirname, 'preload.js'),
       contextIsolation: true,
       nodeIntegration: false,
-      devTools: true
+      devTools: false
     }
   });
 
   win.loadFile('index.html');
   win.setMenuBarVisibility(false);
   
-  // Open DevTools automatically for debugging
-  win.webContents.openDevTools({ mode: 'detach' });
+  // DevTools are disabled for production
+  // win.webContents.openDevTools({ mode: 'detach' });
 }
 
 ipcMain.on('window-ctrl', (e, action) => {
