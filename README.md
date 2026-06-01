@@ -11,15 +11,19 @@ Welcome to **❤ MINI PLAYER** (also known as the *Serene Music Player*), an exq
 
 ## 🎨 Interface & Screenshots Showcase
 
-Below is a showcase grid of the **Mini Player** in action. You can easily populate this showcase with real screenshots captured directly from your desktop!
+Below is a showcase grid of the **Mini Player** in action across different high-contrast themes.
 
-| 🌌 Midnight Theme | 🎨 RGB Gradient Theme |
+| 🌌 Midnight Shadow | 🎨 RGB Spectrum |
 | :---: | :---: |
 | ![Midnight Theme Screenshot](assets/screenshot_midnight.png) | ![RGB Theme Screenshot](assets/screenshot_rgb.png) |
 
-| ⚡ Neon Theme | 🌸 Rose Gold Theme |
+| 🌲 Emerald Forest | 🌸 Rose Gold |
 | :---: | :---: |
-| ![Neon Theme Screenshot](assets/screenshot_neon.png) | ![Rose Theme Screenshot](assets/screenshot_rose.png) |
+| ![Emerald Theme Screenshot](assets/screenshot_emerald.png) | ![Rose Theme Screenshot](assets/screenshot_rose.png) |
+
+| 🍭 Hyperpop Rave |
+| :---: |
+| ![Hyperpop Theme Screenshot](assets/screenshot_hyperpop.png) |
 
 > [!TIP]
 > ### 📸 How to show your real desktop player images on GitHub:
@@ -113,10 +117,11 @@ music-player/
 ├── assets/                  # UI assets & resources
 │   ├── disc2.png            # Default spinning vinyl center cover art
 │   ├── music.png            # Native application window icon
-│   ├── screenshot_midnight.png # Real Midnight theme screenshot (user-added)
-│   ├── screenshot_rgb.png      # Real RGB theme screenshot (user-added)
-│   ├── screenshot_neon.png     # Real Neon theme screenshot (user-added)
-│   └── screenshot_rose.png     # Real Rose Gold theme screenshot (user-added)
+│   ├── screenshot_midnight.png # Real Midnight theme screenshot
+│   ├── screenshot_rgb.png      # Real RGB theme screenshot
+│   ├── screenshot_rose.png     # Real Rose Gold theme screenshot
+│   ├── screenshot_emerald.png  # Real Emerald Forest theme screenshot
+│   └── screenshot_hyperpop.png # Real Hyperpop Rave theme screenshot
 ├── node_modules/            # [IGNORED] External Node dependencies
 ├── index.html               # Main user interface framework
 ├── main.js                  # Electron application entry point
