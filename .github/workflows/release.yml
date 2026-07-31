@@ -6,6 +6,11 @@ on:
       - 'v*'
   workflow_dispatch:
 
+# Give the workflow permission to create releases / upload artifacts
+permissions:
+  contents: write
+  packages: write
+
 jobs:
   release:
     name: Build & Publish Release
@@ -24,15 +29,13 @@ jobs:
         with:
           node-version: 20
           cache: 'npm'
-          cache-dependency-path: music-player/package-lock.json
+          cache-dependency-path: package-lock.json
 
       - name: Install Dependencies
         run: npm ci
-        working-directory: music-player
 
-      - name: Build Electron App
+      - name: Build Electron App and publish
         run: npx electron-builder --publish always
-        working-directory: music-player
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CSC_IDENTITY_AUTO_DISCOVERY: false
