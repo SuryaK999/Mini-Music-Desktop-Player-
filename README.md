@@ -5,7 +5,7 @@
 <h1 align="center">❤ MINI PLAYER | Serene Music Player</h1>
 
 <p align="center">
-  <b>A high-performance, frameless, cross-platform audio player built for modern music lovers.</b>
+  <b>A high-performance, frameless, desktop audio player built for modern music lovers.</b>
 </p>
 
 <p align="center">
@@ -101,17 +101,15 @@ This repository is equipped with fully automated **GitHub Actions CI/CD workflow
 
 ```mermaid
 graph LR
-    A[Git Tag Push v*] --> B[GitHub Actions Runner]
-    B --> C[Build Windows .exe]
-    B --> D[Build macOS .dmg & .zip]
-    B --> E[Build Linux .AppImage & .deb]
-    C --> F[Publish Release Assets]
-    D --> F
-    E --> F
+    A[Git Tag Push v*] --> B[GitHub Actions Windows Runner]
+    B --> C[Build Windows Setup .exe]
+    B --> D[Build Windows Portable .exe]
+    C --> E[Publish Release Assets]
+    D --> E
 ```
 
-- **[release.yml](.github/workflows/release.yml)**: Automatically triggered on `git tag v*` pushes or manually via `workflow_dispatch`. Compiles and publishes binaries for Windows, macOS (Intel & Apple Silicon), and Linux directly to GitHub Releases.
-- **[ci.yml](.github/workflows/ci.yml)**: Continuous integration pipeline running cross-platform build validation on every pull request and push to `main`/`master`.
+- **[release.yml](.github/workflows/release.yml)**: Automatically triggered on `git tag v*` pushes or manually via `workflow_dispatch`. Compiles and publishes Windows NSIS setup installers and Portable executables directly to GitHub Releases.
+- **[ci.yml](.github/workflows/ci.yml)**: Continuous integration pipeline running Windows build validation on every pull request and push to `main`/`master`.
 
 ---
 
@@ -141,7 +139,7 @@ music-player/
 ├── .github/
 │   └── workflows/
 │       ├── ci.yml              # Automated continuous integration workflow
-│       └── release.yml         # Automated multi-platform release builder
+│       └── release.yml         # Automated Windows release builder
 ├── assets/                     # UI assets & theme screenshots
 │   ├── disc2.png               # Default spinning vinyl center cover art
 │   ├── music.png               # Native application window icon
@@ -153,7 +151,7 @@ music-player/
 ├── preload.js                  # IPC security bridge
 ├── renderer.js                 # Player engine logic & Web Audio visualizer
 ├── style.css                   # Theme definitions & Neo-Brutalist CSS
-├── package.json                # Cross-platform electron-builder settings
+├── package.json                # Windows electron-builder settings
 └── README.md                   # Application documentation
 ```
 
@@ -182,15 +180,9 @@ Ensure you have [Node.js](https://nodejs.org/) (v18.0.0 or higher recommended) i
     npm start
     ```
 
-4.  **Build Production Binaries:**
+4.  **Build Production Windows Executables:**
     ```bash
-    # Build for current platform
     npm run build
-
-    # Build specifically for targeted platforms
-    npm run build:win
-    npm run build:mac
-    npm run build:linux
     ```
 
 ---
