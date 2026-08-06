@@ -32,7 +32,7 @@ jobs:
           cache-dependency-path: package-lock.json
 
       - name: Install Dependencies
-        run: npm ci || npm install
+        run: npm install --no-audit
 
       - name: Run Tests & Build Verification
         run: npm test
