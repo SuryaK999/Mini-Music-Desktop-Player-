@@ -22,7 +22,7 @@
     "desktop-app",
     "audio"
   ],
-  "author": "SuryaK999",
+  "author": "SuryaK999 <suryak999@users.noreply.github.com>",
   "license": "ISC",
   "devDependencies": {
     "electron": "^42.3.0",
@@ -92,6 +92,7 @@
     },
     "linux": {
       "category": "Audio;Music;Player;",
+      "maintainer": "SuryaK999 <suryak999@users.noreply.github.com>",
       "target": [
         {
           "target": "AppImage",
