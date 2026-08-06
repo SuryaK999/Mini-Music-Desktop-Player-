@@ -13,7 +13,7 @@
   <a href="https://github.com/SuryaK999/Mini-Music-Desktop-Player-/actions"><img src="https://img.shields.io/github/actions/workflow/status/SuryaK999/Mini-Music-Desktop-Player-/release.yml?style=for-the-badge&logo=githubactions&logoColor=white" alt="Build Status"></a>
   <a href="https://www.electronjs.org/"><img src="https://img.shields.io/badge/Electron-v42.3.0-47848F.svg?style=for-the-badge&logo=electron&logoColor=white" alt="Electron"></a>
   <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://img.shields.io/badge/JavaScript-ES6+-F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"></a>
-  <a href="https://opensource.org/licenses/ISC"><img src="https://img.shields.io/badge/License-ISC-2ea44f.svg?style=for-the-badge" alt="License"></a>
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-2ea44f.svg?style=for-the-badge" alt="License"></a>
 </p>
 
 ---
@@ -189,7 +189,7 @@ Ensure you have [Node.js](https://nodejs.org/) (v18.0.0 or higher recommended) i
 
 ## 📄 License
 
-This software is distributed under the open-source **ISC License**. Feel free to customize, modify, and distribute it.
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details. Feel free to customize, modify, and distribute it.
 
 ---
 
