@@ -1,73 +1,76 @@
 <p align="center">
-  <img src="assets/music.png" width="96" height="96" alt="Mini Player Icon">
+  <img src="assets/music.png" width="110" height="110" alt="Mini Player Icon">
 </p>
 
 <h1 align="center">❤ MINI PLAYER | Serene Music Player</h1>
 
 <p align="center">
-  <a href="https://www.electronjs.org/"><img src="https://img.shields.io/badge/Electron-v42.3.0-blueviolet.svg?style=for-the-badge&logo=electron" alt="Electron"></a>
-  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://img.shields.io/badge/JavaScript-ES6+-yellow.svg?style=for-the-badge&logo=javascript" alt="JavaScript"></a>
-  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img src="https://img.shields.io/badge/Styling-Vanilla%20CSS-ff69b4.svg?style=for-the-badge&logo=css3" alt="CSS"></a>
-  <a href="https://opensource.org/licenses/ISC"><img src="https://img.shields.io/badge/License-ISC-green.svg?style=for-the-badge" alt="License"></a>
+  <b>A high-performance, frameless, cross-platform audio player built for modern music lovers.</b>
 </p>
-
-Welcome to **❤ MINI PLAYER** (also known as the *Serene Music Player*), an exquisitely styled, frameless, and high-contrast desktop audio player built on the high-performance **Electron.js** shell. Featuring bold Neo-Brutalist design elements, Cyberpunk-inspired retro-futuristic styling, dynamic interactive animations, a high-fidelity metadata reader, and real-time frequency visualizers, it redefines the desktop music listening experience.
----
-
-## 📥 Direct Desktop Installation
-
-Click the badges below to instantly download the latest compiled installer for your operating system:
 
 <p align="center">
-  <a href="https://github.com/SuryaK999/Mini-Music-Desktop-Player-/releases/latest/download/Serene-Music-Player-Setup.exe">
-    <img src="https://img.shields.io/badge/Windows-Download%20.exe-blue?style=for-the-badge&logo=windows&logoColor=white&color=0078d4" alt="Download Windows Installer">
-  </a>
-  <a href="https://github.com/SuryaK999/Mini-Music-Desktop-Player-/releases/latest/download/Serene-Music-Player.dmg">
-    <img src="https://img.shields.io/badge/macOS-Download%20.dmg-black?style=for-the-badge&logo=apple&logoColor=white&color=000000" alt="Download macOS Installer">
-  </a>
-  <a href="https://github.com/SuryaK999/Mini-Music-Desktop-Player-/releases/latest/download/Serene-Music-Player.AppImage">
-    <img src="https://img.shields.io/badge/Linux-Download%20.AppImage-orange?style=for-the-badge&logo=linux&logoColor=white&color=f0513e" alt="Download Linux Installer">
-  </a>
+  <a href="https://github.com/SuryaK999/Mini-Music-Desktop-Player-/releases/latest"><img src="https://img.shields.io/github/v/release/SuryaK999/Mini-Music-Desktop-Player-?style=for-the-badge&color=7289da&logo=github" alt="Latest Release"></a>
+  <a href="https://github.com/SuryaK999/Mini-Music-Desktop-Player-/actions"><img src="https://img.shields.io/github/actions/workflow/status/SuryaK999/Mini-Music-Desktop-Player-/release.yml?style=for-the-badge&logo=githubactions&logoColor=white" alt="Build Status"></a>
+  <a href="https://www.electronjs.org/"><img src="https://img.shields.io/badge/Electron-v42.3.0-47848F.svg?style=for-the-badge&logo=electron&logoColor=white" alt="Electron"></a>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://img.shields.io/badge/JavaScript-ES6+-F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"></a>
+  <a href="https://opensource.org/licenses/ISC"><img src="https://img.shields.io/badge/License-ISC-2ea44f.svg?style=for-the-badge" alt="License"></a>
 </p>
-
-> [!NOTE]
-> ### ⚙ Direct Downloads & Automation Setup
-> * **Direct Downloading:** These download buttons point directly to the latest GitHub Release files. If they return a `404` page, it means you have not pushed your first release tag yet (see below).
-> * **Automated Packaging (GitHub Actions):** The repository is now configured to automatically compile, bundle, and release installers whenever you tag your code:
->   1. Commit and push your local files to your remote GitHub repository.
->   2. Run these commands to tag a new version:
->      ```bash
->      git tag v1.0.0
->      git push origin v1.0.0
->      ```
->   3. GitHub Actions will spin up cloud runners (Windows, macOS, and Linux), package the application using `electron-builder`, and publish the installer assets automatically under the **Releases** page! Once that finishes, these badges will instantly trigger direct downloads of the app!
 
 ---
 
-## 🎨 Interface & Screenshots Showcase
+Welcome to **❤ MINI PLAYER** (also known as the *Serene Music Player*), an exquisitely styled, frameless, and high-contrast desktop audio player built on the high-performance **Electron.js** shell. Featuring bold Neo-Brutalist design elements, Cyberpunk-inspired retro-futuristic styling, dynamic interactive animations, a high-fidelity metadata reader, and real-time frequency visualizers, it redefines the desktop music listening experience.
 
-Below is a showcase of the **Mini Player** in action across three of its most iconic, vibrant themes:
+---
+
+## 📥 Direct Desktop Downloads
+
+Click any badge below to **instantly download** the compiled installer or portable binary directly for your operating system:
+
+### 🪟 Windows
+<p align="left">
+  <a href="https://github.com/SuryaK999/Mini-Music-Desktop-Player-/releases/latest/download/Serene-Music-Player-Setup-1.0.0-x64.exe">
+    <img src="https://img.shields.io/badge/Windows-Download_.exe_(Setup)-0078D4?style=for-the-badge&logo=windows&logoColor=white" alt="Download Windows Installer">
+  </a>
+  <a href="https://github.com/SuryaK999/Mini-Music-Desktop-Player-/releases/latest/download/Serene-Music-Player-1.0.0-win-x64.exe">
+    <img src="https://img.shields.io/badge/Windows-Portable_.exe-00A4EF?style=for-the-badge&logo=windows&logoColor=white" alt="Download Windows Portable">
+  </a>
+</p>
+
+### 🍎 macOS
+<p align="left">
+  <a href="https://github.com/SuryaK999/Mini-Music-Desktop-Player-/releases/latest/download/Serene-Music-Player-1.0.0-mac-arm64.dmg">
+    <img src="https://img.shields.io/badge/macOS-Apple_Silicon_.dmg_(M1/M2/M3/M4)-000000?style=for-the-badge&logo=apple&logoColor=white" alt="Download macOS Apple Silicon">
+  </a>
+  <a href="https://github.com/SuryaK999/Mini-Music-Desktop-Player-/releases/latest/download/Serene-Music-Player-1.0.0-mac-x64.dmg">
+    <img src="https://img.shields.io/badge/macOS-Intel_.dmg-333333?style=for-the-badge&logo=apple&logoColor=white" alt="Download macOS Intel">
+  </a>
+</p>
+
+### 🐧 Linux
+<p align="left">
+  <a href="https://github.com/SuryaK999/Mini-Music-Desktop-Player-/releases/latest/download/Serene-Music-Player-1.0.0-linux-x64.AppImage">
+    <img src="https://img.shields.io/badge/Linux-AppImage-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Download Linux AppImage">
+  </a>
+  <a href="https://github.com/SuryaK999/Mini-Music-Desktop-Player-/releases/latest/download/Serene-Music-Player-1.0.0-linux-x64.deb">
+    <img src="https://img.shields.io/badge/Linux-Debian_.deb-A80030?style=for-the-badge&logo=debian&logoColor=white" alt="Download Linux DEB">
+  </a>
+  <a href="https://github.com/SuryaK999/Mini-Music-Desktop-Player-/releases/latest/download/Serene-Music-Player-1.0.0-linux-x64.tar.gz">
+    <img src="https://img.shields.io/badge/Linux-Tarball_.tar.gz-E95420?style=for-the-badge&logo=canonical&logoColor=white" alt="Download Linux Tarball">
+  </a>
+</p>
+
+> [!TIP]
+> View all releases, checksums, and changelogs on the official [GitHub Releases Page](https://github.com/SuryaK999/Mini-Music-Desktop-Player-/releases/latest).
+
+---
+
+## 🎨 Interface & Theme Showcase
+
+Below is a showcase of the **Mini Player** across three of its most iconic, vibrant themes:
 
 | 🎨 RGB Spectrum | 🌸 Rose Gold | 🍭 Hyperpop Rave |
 | :---: | :---: | :---: |
 | ![RGB Spectrum Theme Screenshot](assets/screenshot_rgb.png) | ![Rose Gold Theme Screenshot](assets/screenshot_rose.png) | ![Hyperpop Rave Theme Screenshot](assets/screenshot_hyperpop.png) |
-
-> [!TIP]
-> ### 📸 How to show your real desktop player images on GitHub:
-> 1. Launch your music player locally by running `npm start`.
-> 2. Click the theme cycle button (**☀**) to select the target theme.
-> 3. Take a quick crop screenshot of the running application on your screen.
-> 4. Save your screenshots directly inside your local `assets/` folder with these names:
->    * `screenshot_rgb.png` (RGB Spectrum)
->    * `screenshot_rose.png` (Rose Gold)
->    * `screenshot_hyperpop.png` (Hyperpop Rave)
-> 5. Commit and push the files to GitHub:
->    ```bash
->    git add assets/
->    git commit -m "docs: add actual desktop player screenshots"
->    git push
->    ```
-> Once pushed, these images will instantly replace the placeholders and showcase your real running player!
 
 ---
 
@@ -76,7 +79,7 @@ Below is a showcase of the **Mini Player** in action across three of its most ic
 ### ✨ Visual Brilliance & Neo-Brutalist Styling
 *   **Frameless Translucent Window:** An ultra-premium, frameless container with smooth, customized drag-ready headers (`frame: false`, `transparent: true`).
 *   **Synchronized Vinyl Disc Animation:** Features an interactive rotating vinyl record design that spins smoothly when audio plays, carrying the embedded album art of the active track.
-*   **Real-time Frequency-Reactive Glow:** A dynamic ambient shadow behind the playing vinyl disc that pulses and spreads based on the real-time intensity of the low-end bass frequencies.
+*   **Real-time Frequency-Reactive Glow:** A dynamic ambient shadow behind the playing vinyl disc that pulses and spreads based on live low-end bass frequencies.
 *   **8 Interactive Theme Profiles:** Single-click cycling system to swap across high-contrast, breathtaking HSL palettes:
     1.  🎨 **RGB Spectrum** (`theme-rgb`) - Cybernetic colors.
     2.  🌌 **Midnight Shadow** (`theme-midnight`) - Deep indigo & dark slate.
@@ -89,31 +92,50 @@ Below is a showcase of the **Mini Player** in action across three of its most ic
 
 ### 🎚 High-End Audio & Queue Controls
 *   **Equalizer Audio Visualizer:** High-performance, four-bar audio equalizer that parses and animates to live sound frequencies using the HTML Web Audio API.
-*   **Slide-up Playlist Queue Drawer:** An elegant drawer overlay carrying song indices, titles, and deletion triggers. Seamless double-click interaction allows you to jump directly to any track in the queue.
-*   **Drag & Drop Desktop Integration:** Seamlessly drag audio files (`.mp3`, `.wav`, `.flac`, `.m4a`) from your operating system desktop or file manager directly into the window to queue them instantly.
-*   **Drag-to-Seek Precision Bar:** Click or drag along the seek timeline to instantly skip to any moment of the song, complete with real-time timer counters and visual status bar fillers.
-*   **Built-in Keyboard Shortcuts:** Power-user friendly controls mapped directly to standard key inputs.
+*   **Slide-up Playlist Queue Drawer:** An elegant drawer overlay carrying song indices, titles, and deletion triggers. Double-clicking any item instantly jumps to that track.
+*   **Drag & Drop Desktop Integration:** Seamlessly drag audio files (`.mp3`, `.wav`, `.flac`, `.m4a`) from your OS desktop or file manager directly into the window to queue them instantly.
+*   **Drag-to-Seek Precision Bar:** Click or drag along the seek timeline to skip to any timestamp with live timer counters and status bar fillers.
 
-### 🧠 Aggressive Audio Parsing & Cleaning
-*   **Embedded Metadata Extractor:** Communicates with the Electron backend to parse binary streams and read raw embedded metadata using the `music-metadata` engine (obtaining pure track title, artist names, and high-quality binary album art).
-*   **Clean String Algorithm:** An extremely aggressive, built-in regex cleaner that scrubs redundant filenames, site links, promotional banners, bitrates, and index tags so you see a clean, professional aesthetic:
+### 🧠 Aggressive Audio Parsing & Metadata Scrubbing
+*   **Embedded Metadata Extractor:** Communicates with the Electron backend to parse binary streams and read raw embedded metadata using the `music-metadata` engine (obtaining track title, artist names, and high-res binary album art).
+*   **Clean String Algorithm:** An aggressive regex cleaner that scrubs redundant filenames, site links, promotional banners, bitrates, and index tags so you see a clean title marquee:
     *   *Scrubbed clutter:* `[iSongs.info]`, `(SenSongsMp3.Co)`, `-SenSongs`, `(MP3 320kbps)`, `[160k]`, `(Official Audio)`, `_HQ`, `_HD`, etc.
-    *   *Clean marquee:* Converts a cluttered name like `01 - [iSongs.info] Sweet-Child-O-Mine (MP3 320kbps).mp3` into a beautifully formatted `Sweet Child O Mine`.
-*   **Intelligent Text Marquee:** Automatically animates and scrolls long text banners leftwards if the track title or artist details exceed the visual bounds of the player.
+    *   *Clean marquee:* Converts `01 - [iSongs.info] Sweet-Child-O-Mine (MP3 320kbps).mp3` into `Sweet Child O Mine`.
+*   **Intelligent Text Marquee:** Automatically scrolls long text banners smoothly if titles exceed the visual bounds of the player.
 
 ---
 
-## 🎹 Keyboard Shortcuts Cheat Sheet
+## 🎹 Keyboard Shortcuts
 
-Operate the player like a professional with these instantaneous global hotkeys:
+Operate the player effortlessly with global keyboard hotkeys:
 
 | Key Input | Action |
 | :--- | :--- |
 | **`Spacebar`** | Play / Pause active playback |
 | **`Arrow Right`** | Skip to the next track in the queue |
-| **`Arrow Left`** | Skip to the previous track (or restart if current time is > 3s) |
-| **`Arrow Up`** | Increase application volume in fine steps of **5%** |
-| **`Arrow Down`** | Decrease application volume in fine steps of **5%** |
+| **`Arrow Left`** | Skip to previous track (or restart track if time > 3s) |
+| **`Arrow Up`** | Increase volume by **5%** |
+| **`Arrow Down`** | Decrease volume by **5%** |
+
+---
+
+## ⚙ Continuous Integration & Automated Builds
+
+This repository is equipped with fully automated **GitHub Actions CI/CD workflows**:
+
+```mermaid
+graph LR
+    A[Git Tag Push v*] --> B[GitHub Actions Runner]
+    B --> C[Build Windows .exe]
+    B --> D[Build macOS .dmg & .zip]
+    B --> E[Build Linux .AppImage & .deb]
+    C --> F[Publish Release Assets]
+    D --> F
+    E --> F
+```
+
+- **[release.yml](.github/workflows/release.yml)**: Automatically triggered on `git tag v*` pushes or manually via `workflow_dispatch`. Compiles and publishes binaries for Windows, macOS (Intel & Apple Silicon), and Linux directly to GitHub Releases.
+- **[ci.yml](.github/workflows/ci.yml)**: Continuous integration pipeline running cross-platform build validation on every pull request and push to `main`/`master`.
 
 ---
 
@@ -130,9 +152,9 @@ graph TD
     C -->|Drag & Drop / native dialogs| B
 ```
 
-*   **Main Process (`main.js`):** Instantiates the transparent desktop shell, opens the native select system file picker, and performs backend file parsing using `music-metadata`.
-*   **Preload Bridge (`preload.js`):** Exposes safe, isolated APIs from the host OS directly to the frontend window without exposing sensitive Node.js dependencies globally.
-*   **Renderer Process (`renderer.js`):** Directs the user interface, keyboard navigation, Web Audio visualizer, playback timeline, playlist queue memory, theme swap classes, and string sanitization.
+*   **Main Process (`main.js`):** Instantiates the transparent desktop shell, handles cross-platform window lifecycles, and performs backend file metadata extraction using `music-metadata`.
+*   **Preload Bridge (`preload.js`):** Exposes safe, isolated APIs from the host OS directly to the frontend window via `contextBridge`.
+*   **Renderer Process (`renderer.js`):** Manages the user interface, Web Audio visualizer, timeline seeking, playlist queue, theme swapping, and string sanitization.
 
 ---
 
@@ -140,21 +162,23 @@ graph TD
 
 ```text
 music-player/
-├── assets/                  # UI assets & resources
-│   ├── disc2.png            # Default spinning vinyl center cover art
-│   ├── music.png            # Native application window icon
-│   ├── screenshot_rgb.png      # Real RGB Spectrum theme screenshot
-│   ├── screenshot_rose.png     # Real Rose Gold theme screenshot
-│   └── screenshot_hyperpop.png # Real Hyperpop Rave theme screenshot
-├── node_modules/            # [IGNORED] External Node dependencies
-├── index.html               # Main user interface framework
-├── main.js                  # Electron application entry point
-├── preload.js               # Safe security IPC interface layer
-├── renderer.js              # Application frontend execution logic
-├── style.css                # Premium styling sheets and theme rules
-├── .gitignore               # [NEW] Git ignore specification file
-├── package.json             # App packaging & package details
-└── README.md                # Comprehensive documentation
+├── .github/
+│   └── workflows/
+│       ├── ci.yml              # Automated continuous integration workflow
+│       └── release.yml         # Automated multi-platform release builder
+├── assets/                     # UI assets & theme screenshots
+│   ├── disc2.png               # Default spinning vinyl center cover art
+│   ├── music.png               # Native application window icon
+│   ├── screenshot_rgb.png      # RGB Spectrum theme screenshot
+│   ├── screenshot_rose.png     # Rose Gold theme screenshot
+│   └── screenshot_hyperpop.png # Hyperpop Rave theme screenshot
+├── index.html                  # Main user interface layout
+├── main.js                     # Electron main process entry point
+├── preload.js                  # IPC security bridge
+├── renderer.js                 # Player engine logic & Web Audio visualizer
+├── style.css                   # Theme definitions & Neo-Brutalist CSS
+├── package.json                # Cross-platform electron-builder settings
+└── README.md                   # Application documentation
 ```
 
 ---
@@ -162,14 +186,14 @@ music-player/
 ## 🚀 Quick Start & Installation
 
 ### Prerequisites
-Ensure you have [Node.js](https://nodejs.org/) installed (v16.0.0 or higher recommended).
+Ensure you have [Node.js](https://nodejs.org/) (v18.0.0 or higher recommended) installed.
 
 ### Installation Steps
 
 1.  **Clone the Repository:**
     ```bash
     git clone https://github.com/SuryaK999/Mini-Music-Desktop-Player-.git
-    cd music-player
+    cd Mini-Music-Desktop-Player-
     ```
 
 2.  **Install Dependencies:**
@@ -177,59 +201,30 @@ Ensure you have [Node.js](https://nodejs.org/) installed (v16.0.0 or higher reco
     npm install
     ```
 
-3.  **Run the Music Player:**
+3.  **Run Development Mode:**
     ```bash
     npm start
     ```
 
----
-
-## 🛡 Git Ignore & GitHub Best Practices
-
-To ensure your GitHub repository remains lightweight, secure, and clean, a production-ready `.gitignore` file has been added in the project root.
-
-> [!WARNING]
-> **NEVER** force-commit or upload `node_modules/` or local test music files to GitHub.
-
-### Why do we ignore these specific files?
-
-1.  **`node_modules/` Directory:**
-    *   *Reason:* Contains massive binaries and packages (like Electron itself) totaling **100MB+** of code that change with every build. Committing this causes repository bloat, slow clone times, and merge conflicts.
-    *   *Solution:* Always let developers run `npm install` to download dependencies fresh from the NPM Registry.
-2.  **Sensitive Environment Variables (`.env`, `*.env`):**
-    *   *Reason:* If you configure custom client keys, cloud storage logins, or API keys, committing these files publishes your credentials publicly to GitHub.
-3.  **Local Audio Files (`*.mp3`, `*.wav`, `*.flac`, `*.m4a`, `songs/`, `music/`):**
-    *   *Reason:* Media files are heavy. Git is meant for text source code. Commit-tracking several gigabytes of audio tracks will slow down Git actions and hit GitHub's absolute file limit rules (100MB).
-    *   *Solution:* Create a local folder called `songs/` or `music/` inside your project for sandbox testing. Since it is added to `.gitignore`, it will stay safely offline in your computer!
-4.  **Operating System Trash (`.DS_Store`, `Thumbs.db`):**
-    *   *Reason:* Auto-generated system clutter that has no relevance to your application's logic.
-
-### Commands for Managing Ignored Files
-
-If you accidentally tracked any sensitive files or `node_modules/` *before* adding the `.gitignore` file, they will still be tracked by Git. Run these commands in your terminal to untrack them:
-
-*   **Untrack `node_modules/` safely (keeps files on your disk, deletes from git repository):**
+4.  **Build Production Binaries:**
     ```bash
-    git rm -r --cached node_modules/
-    ```
+    # Build for current platform
+    npm run build
 
-*   **Untrack local audio files safely:**
-    ```bash
-    git rm -r --cached *.mp3 *.wav *.flac *.m4a
-    ```
-
-*   **Apply the new `.gitignore` rules and commit the updates:**
-    ```bash
-    git add .gitignore
-    git commit -m "chore: implement robust security and dependency ignore rules"
+    # Build specifically for targeted platforms
+    npm run build:win
+    npm run build:mac
+    npm run build:linux
     ```
 
 ---
 
 ## 📄 License
 
-This software is distributed under the open-source **ISC License**. Feel free to customize, modify, and distribute it to your heart's content!
+This software is distributed under the open-source **ISC License**. Feel free to customize, modify, and distribute it.
 
 ---
 
-*Made with ❤ for music enthusiasts and desktop builders.*
+<p align="center">
+  <i>Made with ❤ for music enthusiasts and desktop app developers.</i>
+</p>
