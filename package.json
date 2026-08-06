@@ -4,15 +4,24 @@
   "description": "Mini Music Desktop Player",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node -e \"console.log('Build test passed.')\"",
     "start": "electron .",
-    "build": "electron-builder build"
+    "build": "electron-builder build",
+    "build:win": "electron-builder build --win",
+    "build:mac": "electron-builder build --mac",
+    "build:linux": "electron-builder build --linux",
+    "build:all": "electron-builder build -wml"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SuryaK999/Mini-Music-Desktop-Player-.git"
   },
-  "keywords": [],
+  "keywords": [
+    "electron",
+    "music-player",
+    "desktop-app",
+    "audio"
+  ],
   "author": "SuryaK999",
   "license": "ISC",
   "devDependencies": {
@@ -25,6 +34,7 @@
   "build": {
     "appId": "com.suryak999.minimusicplayer",
     "productName": "Serene-Music-Player",
+    "icon": "assets/music.png",
     "directories": {
       "output": "dist"
     },
@@ -35,16 +45,73 @@
       "!.github${/*}"
     ],
     "win": {
-      "target": "nsis",
-      "artifactName": "${productName}-Setup.${ext}"
+      "forceCodeSigning": false,
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "artifactName": "${productName}-Setup-${version}-${arch}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Serene Music Player"
     },
     "mac": {
-      "target": "dmg",
-      "artifactName": "${productName}.${ext}"
+      "category": "public.app-category.music",
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        },
+        {
+          "target": "zip",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        }
+      ],
+      "artifactName": "${productName}-${version}-${os}-${arch}.${ext}"
     },
     "linux": {
-      "target": "AppImage",
-      "artifactName": "${productName}.${ext}"
+      "category": "Audio;Music;Player;",
+      "target": [
+        {
+          "target": "AppImage",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "deb",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "tar.gz",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "artifactName": "${productName}-${version}-${os}-${arch}.${ext}"
     },
     "publish": {
       "provider": "github",
