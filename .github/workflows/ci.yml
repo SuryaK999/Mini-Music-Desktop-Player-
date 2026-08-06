@@ -39,7 +39,8 @@ jobs:
         if: runner.os == 'Linux'
         run: |
           sudo apt-get update
-          sudo apt-get install -y libfuse2 desktop-file-utils
+          sudo apt-get install -y libfuse2t64 || sudo apt-get install -y libfuse2 || true
+          sudo apt-get install -y desktop-file-utils squashfs-tools
 
       - name: Run Tests
         run: npm test

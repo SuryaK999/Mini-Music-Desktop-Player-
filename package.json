@@ -47,18 +47,8 @@
     "win": {
       "forceCodeSigning": false,
       "target": [
-        {
-          "target": "nsis",
-          "arch": [
-            "x64"
-          ]
-        },
-        {
-          "target": "portable",
-          "arch": [
-            "x64"
-          ]
-        }
+        "nsis",
+        "portable"
       ],
       "artifactName": "${productName}-Setup-${version}-${arch}.${ext}"
     },
@@ -72,21 +62,11 @@
     "mac": {
       "category": "public.app-category.music",
       "identity": null,
+      "hardenedRuntime": false,
+      "gatekeeperAssess": false,
       "target": [
-        {
-          "target": "dmg",
-          "arch": [
-            "x64",
-            "arm64"
-          ]
-        },
-        {
-          "target": "zip",
-          "arch": [
-            "x64",
-            "arm64"
-          ]
-        }
+        "dmg",
+        "zip"
       ],
       "artifactName": "${productName}-${version}-${os}-${arch}.${ext}"
     },
@@ -94,24 +74,9 @@
       "category": "Audio;Music;Player;",
       "maintainer": "SuryaK999 <suryak999@users.noreply.github.com>",
       "target": [
-        {
-          "target": "AppImage",
-          "arch": [
-            "x64"
-          ]
-        },
-        {
-          "target": "deb",
-          "arch": [
-            "x64"
-          ]
-        },
-        {
-          "target": "tar.gz",
-          "arch": [
-            "x64"
-          ]
-        }
+        "AppImage",
+        "deb",
+        "tar.gz"
       ],
       "artifactName": "${productName}-${version}-${os}-${arch}.${ext}"
     },
