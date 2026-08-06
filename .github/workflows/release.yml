@@ -34,6 +34,12 @@ jobs:
       - name: Install Dependencies
         run: npm install --no-audit
 
+      - name: Install System Dependencies (Linux)
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libfuse2 desktop-file-utils
+
       - name: Run Tests & Build Verification
         run: npm test
 
