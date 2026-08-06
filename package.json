@@ -6,11 +6,8 @@
   "scripts": {
     "test": "node -e \"console.log('Build test passed.')\"",
     "start": "electron .",
-    "build": "electron-builder build",
-    "build:win": "electron-builder build --win",
-    "build:mac": "electron-builder build --mac",
-    "build:linux": "electron-builder build --linux",
-    "build:all": "electron-builder build -wml"
+    "build": "electron-builder build --win",
+    "build:win": "electron-builder build --win"
   },
   "repository": {
     "type": "git",
@@ -47,8 +44,18 @@
     "win": {
       "forceCodeSigning": false,
       "target": [
-        "nsis",
-        "portable"
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
       ],
       "artifactName": "${productName}-Setup-${version}-${arch}.${ext}"
     },
@@ -58,27 +65,6 @@
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
       "shortcutName": "Serene Music Player"
-    },
-    "mac": {
-      "category": "public.app-category.music",
-      "identity": null,
-      "hardenedRuntime": false,
-      "gatekeeperAssess": false,
-      "target": [
-        "dmg",
-        "zip"
-      ],
-      "artifactName": "${productName}-${version}-${os}-${arch}.${ext}"
-    },
-    "linux": {
-      "category": "Audio;Music;Player;",
-      "maintainer": "SuryaK999 <suryak999@users.noreply.github.com>",
-      "target": [
-        "AppImage",
-        "deb",
-        "tar.gz"
-      ],
-      "artifactName": "${productName}-${version}-${os}-${arch}.${ext}"
     },
     "publish": {
       "provider": "github",

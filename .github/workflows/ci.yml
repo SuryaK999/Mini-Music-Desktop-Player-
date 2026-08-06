@@ -13,13 +13,8 @@ on:
 
 jobs:
   build-and-test:
-    name: Test & Build (${{ matrix.os }})
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
+    name: Test & Build (Windows)
+    runs-on: windows-latest
 
     steps:
       - name: Checkout Code
@@ -35,30 +30,18 @@ jobs:
       - name: Install Dependencies
         run: npm install --no-audit
 
-      - name: Install System Dependencies (Linux)
-        if: runner.os == 'Linux'
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y libfuse2t64 || sudo apt-get install -y libfuse2 || true
-          sudo apt-get install -y desktop-file-utils squashfs-tools
-
       - name: Run Tests
         run: npm test
 
       - name: Build Electron App (Dry Run)
-        run: npx electron-builder --publish never
+        run: npx electron-builder --win --publish never
         env:
           CSC_IDENTITY_AUTO_DISCOVERY: false
 
       - name: Upload Test Build Artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: ci-build-${{ matrix.os }}
+          name: ci-build-windows
           path: |
             dist/*.exe
-            dist/*.dmg
-            dist/*.zip
-            dist/*.AppImage
-            dist/*.deb
-            dist/*.tar.gz
           if-no-files-found: ignore

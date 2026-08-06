@@ -22,40 +22,16 @@ Welcome to **❤ MINI PLAYER** (also known as the *Serene Music Player*), an exq
 
 ---
 
-## 📥 Direct Desktop Downloads
+## 📥 Direct Windows Downloads
 
-Click any badge below to **instantly download** the compiled installer or portable binary directly for your operating system:
+Click any badge below to **instantly download** the compiled Windows installer setup or standalone portable executable:
 
-### 🪟 Windows
-<p align="left">
+<p align="center">
   <a href="https://github.com/SuryaK999/Mini-Music-Desktop-Player-/releases/latest/download/Serene-Music-Player-Setup-1.0.0-x64.exe">
     <img src="https://img.shields.io/badge/Windows-Download_.exe_(Setup)-0078D4?style=for-the-badge&logo=windows&logoColor=white" alt="Download Windows Installer">
   </a>
   <a href="https://github.com/SuryaK999/Mini-Music-Desktop-Player-/releases/latest/download/Serene-Music-Player-1.0.0-win-x64.exe">
     <img src="https://img.shields.io/badge/Windows-Portable_.exe-00A4EF?style=for-the-badge&logo=windows&logoColor=white" alt="Download Windows Portable">
-  </a>
-</p>
-
-### 🍎 macOS
-<p align="left">
-  <a href="https://github.com/SuryaK999/Mini-Music-Desktop-Player-/releases/latest/download/Serene-Music-Player-1.0.0-mac-arm64.dmg">
-    <img src="https://img.shields.io/badge/macOS-Apple_Silicon_.dmg_(M1/M2/M3/M4)-000000?style=for-the-badge&logo=apple&logoColor=white" alt="Download macOS Apple Silicon">
-  </a>
-  <a href="https://github.com/SuryaK999/Mini-Music-Desktop-Player-/releases/latest/download/Serene-Music-Player-1.0.0-mac-x64.dmg">
-    <img src="https://img.shields.io/badge/macOS-Intel_.dmg-333333?style=for-the-badge&logo=apple&logoColor=white" alt="Download macOS Intel">
-  </a>
-</p>
-
-### 🐧 Linux
-<p align="left">
-  <a href="https://github.com/SuryaK999/Mini-Music-Desktop-Player-/releases/latest/download/Serene-Music-Player-1.0.0-linux-x64.AppImage">
-    <img src="https://img.shields.io/badge/Linux-AppImage-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Download Linux AppImage">
-  </a>
-  <a href="https://github.com/SuryaK999/Mini-Music-Desktop-Player-/releases/latest/download/Serene-Music-Player-1.0.0-linux-x64.deb">
-    <img src="https://img.shields.io/badge/Linux-Debian_.deb-A80030?style=for-the-badge&logo=debian&logoColor=white" alt="Download Linux DEB">
-  </a>
-  <a href="https://github.com/SuryaK999/Mini-Music-Desktop-Player-/releases/latest/download/Serene-Music-Player-1.0.0-linux-x64.tar.gz">
-    <img src="https://img.shields.io/badge/Linux-Tarball_.tar.gz-E95420?style=for-the-badge&logo=canonical&logoColor=white" alt="Download Linux Tarball">
   </a>
 </p>
 
