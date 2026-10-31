@@ -97,19 +97,21 @@ Operate the player effortlessly with global keyboard hotkeys:
 
 ## ⚙ Continuous Integration & Automated Builds
 
-This repository is equipped with fully automated **GitHub Actions CI/CD workflows**:
+This repository is equipped with fully automated **multi-platform GitHub Actions CI/CD workflows** targeting **Windows**, **macOS**, and **Linux**:
 
 ```mermaid
-graph LR
-    A[Git Tag Push v*] --> B[GitHub Actions Windows Runner]
-    B --> C[Build Windows Setup .exe]
-    B --> D[Build Windows Portable .exe]
-    C --> E[Publish Release Assets]
-    D --> E
+graph TD
+    A[Git Push / Tag Push v*] --> B[GitHub Actions Matrix Runners]
+    B --> C["Windows Runner (Setup .exe & Portable .exe)"]
+    B --> D["macOS Runner (.dmg & .zip)"]
+    B --> E["Linux Runner (.AppImage & .deb)"]
+    C --> F[GitHub Releases & Artifacts]
+    D --> F
+    E --> F
 ```
 
-- **[release.yml](.github/workflows/release.yml)**: Automatically triggered on `git tag v*` pushes or manually via `workflow_dispatch`. Compiles and publishes Windows NSIS setup installers and Portable executables directly to GitHub Releases.
-- **[ci.yml](.github/workflows/ci.yml)**: Continuous integration pipeline running Windows build validation on every pull request and push to `main`/`master`.
+- **[release.yml](.github/workflows/release.yml)**: Automatically triggered on `git tag v*` pushes or manually via `workflow_dispatch`. Concurrently compiles and publishes native application installers across all three operating systems (Windows NSIS Setup & Portable, macOS DMG & ZIP, Linux AppImage & DEB) directly to GitHub Releases.
+- **[ci.yml](.github/workflows/ci.yml)**: Continuous integration pipeline running concurrent multi-platform build validation and syntax tests on every pull request and push to `main`/`master`.
 
 ---
 
@@ -180,9 +182,15 @@ Ensure you have [Node.js](https://nodejs.org/) (v18.0.0 or higher recommended) i
     npm start
     ```
 
-4.  **Build Production Windows Executables:**
+4.  **Build Production Desktop Executables:**
     ```bash
+    # Build for current host OS
     npm run build
+
+    # Platform-specific builds
+    npm run build:win      # Windows (.exe setup & portable)
+    npm run build:mac      # macOS (.dmg & .zip)
+    npm run build:linux    # Linux (.AppImage & .deb)
     ```
 
 ---
