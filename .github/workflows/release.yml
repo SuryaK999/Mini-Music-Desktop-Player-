@@ -5,18 +5,57 @@ on:
     tags:
       - 'v*'
   workflow_dispatch:
+    inputs:
+      publish_mode:
+        description: 'Publish Mode (always, onTag, onTagOrDraft)'
+        required: false
+        default: 'always'
+        type: choice
+        options:
+          - always
+          - onTag
+          - onTagOrDraft
 
 permissions:
   contents: write
 
 jobs:
   release:
-    name: Build & Publish (Windows)
-    runs-on: windows-latest
+    name: Build & Publish (${{ matrix.platform }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: windows-latest
+            platform: Windows
+            build-args: --win
+            artifact-name: serene-player-windows
+            artifact-path: |
+              dist/*.exe
+              dist/latest.yml
+          - os: macos-latest
+            platform: macOS
+            build-args: --mac
+            artifact-name: serene-player-macos
+            artifact-path: |
+              dist/*.dmg
+              dist/*.zip
+              dist/latest-mac.yml
+          - os: ubuntu-latest
+            platform: Linux
+            build-args: --linux
+            artifact-name: serene-player-linux
+            artifact-path: |
+              dist/*.AppImage
+              dist/*.deb
+              dist/latest-linux.yml
 
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -25,15 +64,21 @@ jobs:
           cache: 'npm'
           cache-dependency-path: package-lock.json
 
+      - name: Enable Windows Developer Mode
+        if: runner.os == 'Windows'
+        run: |
+          New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock" -Name "AllowDevelopmentWithoutDevLicense" -Value 1 -Type DWORD -Force
+
       - name: Install Dependencies
-        run: npm install --no-audit
+        run: npm ci
 
       - name: Run Tests & Build Verification
         run: npm test
 
       - name: Build and Publish Electron App
-        run: npx electron-builder --win --publish always
+        run: npx electron-builder ${{ matrix.build-args }} --publish ${{ github.event.inputs.publish_mode || 'always' }}
         env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CSC_IDENTITY_AUTO_DISCOVERY: false
 
@@ -41,7 +86,6 @@ jobs:
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: serene-music-player-windows
-          path: |
-            dist/*.exe
+          name: ${{ matrix.artifact-name }}
+          path: ${{ matrix.artifact-path }}
           if-no-files-found: ignore
