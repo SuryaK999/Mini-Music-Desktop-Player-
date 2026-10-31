@@ -11,6 +11,7 @@
 <p align="center">
   <a href="https://github.com/SuryaK999/Mini-Music-Desktop-Player-/releases/latest"><img src="https://img.shields.io/github/v/release/SuryaK999/Mini-Music-Desktop-Player-?style=for-the-badge&color=7289da&logo=github" alt="Latest Release"></a>
   <a href="https://github.com/SuryaK999/Mini-Music-Desktop-Player-/actions"><img src="https://img.shields.io/github/actions/workflow/status/SuryaK999/Mini-Music-Desktop-Player-/release.yml?style=for-the-badge&logo=githubactions&logoColor=white" alt="Build Status"></a>
+  <img src="https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-007ACC?style=for-the-badge" alt="Supported Platforms">
   <a href="https://www.electronjs.org/"><img src="https://img.shields.io/badge/Electron-v42.3.0-47848F.svg?style=for-the-badge&logo=electron&logoColor=white" alt="Electron"></a>
   <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://img.shields.io/badge/JavaScript-ES6+-F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"></a>
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-2ea44f.svg?style=for-the-badge" alt="License"></a>
@@ -18,25 +19,49 @@
 
 ---
 
-Welcome to **❤ MINI PLAYER** (also known as the *Serene Music Player*), an exquisitely styled, frameless, and high-contrast desktop audio player built on the high-performance **Electron.js** shell. Featuring bold Neo-Brutalist design elements, Cyberpunk-inspired retro-futuristic styling, dynamic interactive animations, a high-fidelity metadata reader, and real-time frequency visualizers, it redefines the desktop music listening experience.
+Welcome to **❤ MINI PLAYER** (also known as the *Serene Music Player*), an exquisitely styled, frameless, and high-contrast desktop audio player built on the high-performance **Electron.js** shell. Featuring bold Neo-Brutalist design elements, Cyberpunk-inspired retro-futuristic styling, dynamic interactive animations, a high-fidelity metadata reader, and real-time frequency visualizers, it redefines the desktop music listening experience across **Windows**, **macOS**, and **Linux**.
 
 ---
 
-## 📥 Direct Windows Downloads
+## 📥 Direct Downloads & Releases
 
-Click any badge below to **instantly download** the compiled Windows installer setup or standalone portable executable:
+Click any badge below to **instantly download** the compiled native desktop installer or standalone portable package for your operating system:
 
+### 🪟 Windows
 <p align="center">
   <a href="https://github.com/SuryaK999/Mini-Music-Desktop-Player-/releases/latest/download/Serene-Music-Player-Setup-1.0.0-x64.exe">
-    <img src="https://img.shields.io/badge/Windows-Download_.exe_(Setup)-0078D4?style=for-the-badge&logo=windows&logoColor=white" alt="Download Windows Installer">
+    <img src="https://img.shields.io/badge/Windows-Setup_.exe_(NSIS)-0078D4?style=for-the-badge&logo=windows&logoColor=white" alt="Download Windows Installer">
   </a>
   <a href="https://github.com/SuryaK999/Mini-Music-Desktop-Player-/releases/latest/download/Serene-Music-Player-1.0.0-win-x64.exe">
     <img src="https://img.shields.io/badge/Windows-Portable_.exe-00A4EF?style=for-the-badge&logo=windows&logoColor=white" alt="Download Windows Portable">
   </a>
 </p>
 
+### 🍎 macOS
+<p align="center">
+  <a href="https://github.com/SuryaK999/Mini-Music-Desktop-Player-/releases/latest/download/Serene-Music-Player-1.0.0-mac-arm64.dmg">
+    <img src="https://img.shields.io/badge/macOS-Apple_Silicon_.dmg-000000?style=for-the-badge&logo=apple&logoColor=white" alt="Download macOS Apple Silicon DMG">
+  </a>
+  <a href="https://github.com/SuryaK999/Mini-Music-Desktop-Player-/releases/latest/download/Serene-Music-Player-1.0.0-mac-x64.dmg">
+    <img src="https://img.shields.io/badge/macOS-Intel_.dmg-555555?style=for-the-badge&logo=apple&logoColor=white" alt="Download macOS Intel DMG">
+  </a>
+  <a href="https://github.com/SuryaK999/Mini-Music-Desktop-Player-/releases/latest/download/Serene-Music-Player-1.0.0-mac-arm64.zip">
+    <img src="https://img.shields.io/badge/macOS-Universal_.zip-708090?style=for-the-badge&logo=apple&logoColor=white" alt="Download macOS ZIP">
+  </a>
+</p>
+
+### 🐧 Linux
+<p align="center">
+  <a href="https://github.com/SuryaK999/Mini-Music-Desktop-Player-/releases/latest/download/Serene-Music-Player-1.0.0-linux-x64.AppImage">
+    <img src="https://img.shields.io/badge/Linux-AppImage_(x64)-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Download Linux AppImage">
+  </a>
+  <a href="https://github.com/SuryaK999/Mini-Music-Desktop-Player-/releases/latest/download/Serene-Music-Player-1.0.0-linux-x64.deb">
+    <img src="https://img.shields.io/badge/Linux-Debian_.deb-A30035?style=for-the-badge&logo=debian&logoColor=white" alt="Download Linux DEB">
+  </a>
+</p>
+
 > [!TIP]
-> View all releases, checksums, and changelogs on the official [GitHub Releases Page](https://github.com/SuryaK999/Mini-Music-Desktop-Player-/releases/latest).
+> View all releases, SHA-256 checksums, and update manifests on the official [GitHub Releases Page](https://github.com/SuryaK999/Mini-Music-Desktop-Player-/releases/latest).
 
 ---
 
