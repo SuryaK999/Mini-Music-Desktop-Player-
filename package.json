@@ -4,10 +4,13 @@
   "description": "Mini Music Desktop Player",
   "main": "main.js",
   "scripts": {
-    "test": "node -e \"console.log('Build test passed.')\"",
+    "test": "node --check main.js && node --check preload.js && node --check renderer.js && node -e \"console.log('Syntax check passed.')\"",
     "start": "electron .",
-    "build": "electron-builder build --win",
-    "build:win": "electron-builder build --win"
+    "build": "electron-builder",
+    "build:win": "electron-builder build --win",
+    "build:mac": "electron-builder build --mac",
+    "build:linux": "electron-builder build --linux",
+    "build:all": "electron-builder -mwl"
   },
   "repository": {
     "type": "git",
@@ -56,15 +59,38 @@
             "x64"
           ]
         }
-      ],
-      "artifactName": "${productName}-Setup-${version}-${arch}.${ext}"
+      ]
     },
     "nsis": {
       "oneClick": false,
       "allowToChangeInstallationDirectory": true,
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
-      "shortcutName": "Serene Music Player"
+      "shortcutName": "Serene Music Player",
+      "artifactName": "${productName}-Setup-${version}-${arch}.${ext}"
+    },
+    "portable": {
+      "artifactName": "${productName}-${version}-win-${arch}.${ext}"
+    },
+    "mac": {
+      "category": "public.app-category.music",
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "artifactName": "${productName}-${version}-mac-${arch}.${ext}"
+    },
+    "dmg": {
+      "title": "${productName} ${version}",
+      "artifactName": "${productName}-${version}-mac-${arch}.${ext}"
+    },
+    "linux": {
+      "category": "Audio",
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "artifactName": "${productName}-${version}-linux-${arch}.${ext}"
     },
     "publish": {
       "provider": "github",
