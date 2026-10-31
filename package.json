@@ -75,8 +75,20 @@
     "mac": {
       "category": "public.app-category.music",
       "target": [
-        "dmg",
-        "zip"
+        {
+          "target": "dmg",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        },
+        {
+          "target": "zip",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        }
       ],
       "artifactName": "${productName}-${version}-mac-${arch}.${ext}"
     },
@@ -87,8 +99,18 @@
     "linux": {
       "category": "Audio",
       "target": [
-        "AppImage",
-        "deb"
+        {
+          "target": "AppImage",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "deb",
+          "arch": [
+            "x64"
+          ]
+        }
       ],
       "artifactName": "${productName}-${version}-linux-${arch}.${ext}"
     },
